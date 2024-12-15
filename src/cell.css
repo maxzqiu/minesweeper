@@ -1,0 +1,51 @@
+.cell {
+    border: 2px solid black;
+    border-radius: 4px;
+    background-color:lightgray;
+    width:2rem;
+    height:2rem;
+    text-align:center;  
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transition: 0.7s ease;
+}
+
+.hidden{
+    background-color:lightgreen;
+}
+.row{
+    display:flex;
+}
+
+.title{
+    font-family:Arial;
+}
+
+* {
+    background-color:antiquewhite;
+}
+
+/* How to make alternate colors: 
+.row:nth-child(even) .cell:nth-child(even),
+.row:nth-child(odd) .cell:nth-child(odd){
+    background-color:lightgray
+} */
+
+ /*.cell:not(.hidden){
+    background-color:#C4A484 !important;
+}*/
+
+.board-container{
+    position:relative;
+    width:max-content;
+}
+
+.board-container button{
+    position:absolute;
+    left:50%; /* 50% of parent, move left*/
+    top:50%;/* 50% of parent, move down*/
+    right:true;
+    transform:translate(-50%,-50%) /* relative to its own size*/
+}
